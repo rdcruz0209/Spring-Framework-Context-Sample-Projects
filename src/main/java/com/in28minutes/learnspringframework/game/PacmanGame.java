@@ -1,5 +1,10 @@
 package com.in28minutes.learnspringframework.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class PacmanGame implements GamingConsole {
 
     public void up() {
@@ -18,8 +23,5 @@ public class PacmanGame implements GamingConsole {
         System.out.println("Pacman Game: Going right and eating right");
     }
 
-    @Override
-    public String toString() {
-        return PacmanGame.class.toString();
-    }
+
 }
