@@ -16,11 +16,6 @@ public class SimpleSpringContextLauncherApplication {
                      new AnnotationConfigApplicationContext
                              (SimpleSpringContextLauncherApplication.class)) {
 
-
-//            context.getBean(GameRunner.class).run();
-//            context.getBean("GamingConsole");
-
-
             Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
         }
 
