@@ -25,9 +25,4 @@ public class SuperContraGame implements GamingConsole {
         System.out.println("Super Contra: Shoot a bullet");
 
     }
-
-    @Override
-    public String toString() {
-        return SuperContraGame.class.toString();
-    }
 }

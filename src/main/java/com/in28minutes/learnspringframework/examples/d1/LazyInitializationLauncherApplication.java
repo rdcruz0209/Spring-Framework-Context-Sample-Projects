@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 @Component
 class ClassA {
 
@@ -27,10 +30,11 @@ class ClassB {
     }
 }
 
-@Configuration
+
 //@Lazy
 @ComponentScan
 public class LazyInitializationLauncherApplication {
+
 
     public static void main(String[] args) {
 
@@ -39,9 +43,11 @@ public class LazyInitializationLauncherApplication {
                              (LazyInitializationLauncherApplication.class)) {
 
             System.out.println("Initialization of the context is completed");
-            context.getBean(ClassB.class).doSomething();
+//            context.getBean(ClassB.class).doSomething();
 
+            Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
         }
+
 
 //        GameRunner gameRunner = new GameRunner(game);
 

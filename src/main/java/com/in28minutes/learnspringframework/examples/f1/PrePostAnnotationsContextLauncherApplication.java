@@ -2,6 +2,7 @@ package com.in28minutes.learnspringframework.examples.f1;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,11 +24,14 @@ class SomeClass {
     @PostConstruct
     public void initialize() {
         someDependencies.getReady();
+        System.out.println(someDependencies); // - same object - singleton
     }
+
 
     @PreDestroy
     public void cleanUp() {
         System.out.println("Clean up");
+        System.out.println(someDependencies); // - same object - singleton
     }
 }
 
@@ -37,6 +41,11 @@ class SomeDependencies {
 
     public void getReady() {
         System.out.println("Some Logic using SomeDependency");
+    }
+
+    @PreDestroy
+    public void getOut() {
+        System.out.println("Getting out");
     }
 
 }
