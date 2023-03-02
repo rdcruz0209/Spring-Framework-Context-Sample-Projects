@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Primary
 public class MarioGame implements GamingConsole {
 
+
     @Bean("name")
     public String StringName() {
         return "robert";

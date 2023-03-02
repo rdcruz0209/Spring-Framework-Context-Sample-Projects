@@ -1,12 +1,17 @@
 package com.in28minutes.learnspringframework.game;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
 @ComponentScan
 public class GamingAppLauncherApplication {
+
+    //    @Autowired
     private GamingConsole gamingConsole;
 
     GamingAppLauncherApplication(GamingConsole gamingConsole) {
@@ -30,12 +35,12 @@ public class GamingAppLauncherApplication {
 
             System.out.println("=-======================Spring Automatic");
 
-            System.out.println(context.getBean("name"));
+            System.out.println(context.getBean(MarioGame.class).StringName());
 
             System.out.println("=-======================Explicitly stated");
-            
+
             MarioGame marioGame = new MarioGame();
-            marioGame.StringName();
+            System.out.println(marioGame.StringName());
 //            Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
         }
 
