@@ -1,6 +1,5 @@
-package com.in28minutes.learnspringframework.examples.businesscalculationserviceC1;
+package com.in28minutes.learnspringframework.examples.c1primaryandqualifierexample;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository

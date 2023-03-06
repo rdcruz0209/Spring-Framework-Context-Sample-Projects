@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.examples.businesscalculationserviceC1;
+package com.in28minutes.learnspringframework.examples.c1primaryandqualifierexample;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;

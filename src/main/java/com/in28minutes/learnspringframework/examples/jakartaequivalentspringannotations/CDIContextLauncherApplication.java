@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.examples.g1;
+package com.in28minutes.learnspringframework.examples.jakartaequivalentspringannotations;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
